@@ -5,8 +5,12 @@ from posts.models import Post
 
 class Follower(models.Model):
 
-    owner = models.ForeignKey(related_name='following', on_delete=CASCADE)
-    followed = models.ForeignKey(related_name='followed', on_delete=CASCADE)
+    owner = models.ForeignKey(
+        User, related_name='following', on_delete=models.CASCADE
+        )
+    followed = models.ForeignKey(
+        User, related_name='followed', on_delete=models.CASCADE
+        )
     created_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
