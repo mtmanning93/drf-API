@@ -36,9 +36,9 @@ REST_FRAMEWORK = {
 }
 
 if 'DEV' not in os.environ:
-    REST_FRAMEWORK['DEFAULT_AUTHENTICATION_CLASSES'] = {
+    REST_FRAMEWORK['DEFAULT_AUTHENTICATION_CLASSES'] = [
         'rest_framework.renderers.JSONRenderer',
-    }
+    ]
 
 REST_USE_JWT = True
 JWT_AUTH_SECURE = True
