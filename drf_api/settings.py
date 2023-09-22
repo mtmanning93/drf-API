@@ -48,7 +48,7 @@ JWT_AUTH_REFRESH_COOKIE = 'my-refresh-token'
 JWT_AUTH_SAMESITE = 'None'
 
 REST_AUTH_SERIALIZERS = {
-    'USERS_DETAILS_SERIALIZER': 'drf_api.serializers.CurrentUserSerializer'
+    'USER_DETAILS_SERIALIZER': 'drf_api.serializers.CurrentUserSerializer'
 }
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -99,6 +99,7 @@ INSTALLED_APPS = [
     'likes',
     'followers',
 ]
+
 SITE_ID = 1
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
