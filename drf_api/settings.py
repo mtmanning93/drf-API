@@ -62,7 +62,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'DEV' in os.environ
+DEBUG = False
 
 ALLOWED_HOSTS = [
     '8000-mtmanning93-drfapi-iox54r178n7.ws-eu104.gitpod.io',
@@ -122,10 +122,7 @@ if 'CLIENT_ORIGIN_DEV' in os.environ:
         rf"{extracted_url}(eu|us)\d+\w\.gitpod\.io$",
     ]
 
-CORS_ALLOW_CREDENTIALS = False
-CORS_ALLOWED_ORIGINS = [
-    'https://momentuswt-8fe8f147ee2b.herokuapp.com'
-]
+CORS_ALLOW_CREDENTIALS = True
 
 ROOT_URLCONF = 'drf_api.urls'
 
